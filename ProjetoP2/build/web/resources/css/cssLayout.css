@@ -1,0 +1,49 @@
+
+#top {
+    background-color: #036fab;
+    color: white;
+}
+
+#bottom {
+    background-color: #c2dfef;
+}
+
+#left {
+    background-color: #ece3a5;
+}
+
+#right {
+    background-color: #ece3a5;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;
+}
+
+.left_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+#top a:link, #top a:visited {
+  color: white;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+

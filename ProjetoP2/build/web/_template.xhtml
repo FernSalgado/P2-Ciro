@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <h:outputStylesheet name="./css/materialize.css"/>
+        <title><ui:insert name="title">title</ui:insert></title>
+    </h:head>
+
+    <h:body>
+
+        <div class="container row">
+            <div class="col s12 l12 m12" id="top">
+                <ui:insert name="top">Top</ui:insert>
+                <h:form>
+                    <h:outputLabel value="#{msgs.idioma}:" for="idioma"/>
+                    <h:selectOneMenu onchange="submit()" id="idioma"
+                                     value="#{idioma.localizacao}" 
+                                     valueChangeListener="#{idioma.mudouIdioma}"
+                                     converter="converter.LocalizacaoConverter">
+                        <f:selectItems value="#{idioma.idiomasSuportados}"/>
+                    </h:selectOneMenu>
+                </h:form>
+            </div>
+            <div class="row">
+                <div class="col s3 m3 l3" id="left">
+                    <ui:insert name="left">Left</ui:insert>
+                </div>
+                <div class="col s9 m9 l9" id="content">
+                    <ui:insert name="content">Content</ui:insert>
+                </div>
+            </div>
+            <div class="col m12 s12 l12" id="bottom">
+                <ui:insert name="bottom">Nomes</ui:insert>
+            </div>
+        </div>
+        <h:outputScript name="./js/materialize.js"/>
+    </h:body>
+
+</html>
